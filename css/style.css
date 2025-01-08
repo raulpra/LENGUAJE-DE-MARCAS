@@ -1,0 +1,399 @@
+
+.header{
+    width: 100%;
+}
+.imagenes_header{   
+    width: 100%;
+    height: 180px; 
+    position: relative;
+}
+.imagen_fondo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.imagen_logo{
+    height: 100%;
+    width: 600px;
+    position: absolute;
+    top: 30%; /*posiciona en el centro*/
+    left: 30%; /*posiciona en el centro*/
+    transform: translate(-30%, -30%); /*hace que posicione en el % del contenedor*/
+    object-fit: contain;
+}  
+
+/*CSS barra de navegacion*/
+.barra_navegacion{
+    display: flex;
+    justify-content: space-between;
+    background-color:  rgb(220, 220, 220);
+    align-items: center;
+    padding-right: 20px;
+    height: 70px;   
+}
+.barra_navegacion_izda{
+    display: flex;
+    align-items: center;
+}
+.logo_barra_navegacion{
+    height: 50px; 
+}
+.logo_barra_navegacion_palabra{
+    height: 50px; 
+}
+.enlaces_barra_dcha{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 9px;
+}
+.enlace_navegacion{   
+    display: flex;
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    align-items: center;
+    padding: 4px;
+}  
+.enlace_navegacion:hover{   
+    background-color: rgb(175, 175, 175);   
+    border-radius: 25px; 
+}
+.icono_navegacion{
+    height: 25px;
+    width: 25px;
+    padding: 10px 10px;
+    fill:  rgb(78, 78, 78);
+}
+
+/*CSS carrusel sin texto
+.carrusel{
+    width: 100%;
+    height:auto;
+    overflow: hidden;   
+}
+.imagenes_carrusel {
+    display: flex;
+    width: 400%; /*4 imágenes/*
+}
+.imagenes_carrusel img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    animation: movimientoSlider 24s infinite ease-in-out;
+}
+*/
+
+.carrusel{
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    position: relative;
+}
+.imagenes_carrusel {
+    display: flex;
+    width: 400%; /*4 imágenes*/   
+}
+.diapositiva_carrusel{
+    position: relative;
+    width: 100%;
+    animation: movimientoSlider 24s infinite ease-in-out;
+}
+.texto_carrusel{
+    position:absolute;
+    width: 100%;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    font-family: "Poppins", sans-serif;
+    font: weight 800px;
+    font-size: 55px;
+    color:rgb(233, 233, 233);
+    text-shadow: 8px 8px 20px black;
+    text-align: center;   
+}
+.imagenes_carrusel img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}   
+
+@keyframes movimientoSlider {
+    0%{ transform: translateX(0);}
+    20%{ transform: translateX(0);}
+    25%{transform: translateX(-100%);}
+    45%{transform: translateX(-100%);}
+    50%{transform: translateX(-200%);}
+    70%{transform: translateX(-200%);}
+    75%{transform: translateX(-300%);}
+    95%{transform: translateX(-300%);}
+    100%{transform: translateX(0);} 
+}
+
+/*CSS presentacion*/
+.presentacion{
+    color: rgb(78, 78, 78);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 65px 5px 65px;
+}
+
+/*CSS Productos*/
+.contenedor_productos{
+    display: grid;
+    grid-template-columns:  22% 22% 22% ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+     " item1 item2 item3 "
+     " item4 item5 item6 ";
+    justify-content: center;
+    column-gap: 25px;
+    row-gap: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.productos{
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgb(160, 160, 160);
+    position: relative;
+    filter: grayscale(40%);
+}
+.productos:hover{
+    box-shadow: 9px 9px 60px  rgb(131, 131, 131);
+    filter: grayscale(0%);
+}
+.texto_producto{  
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color:white;
+    position:absolute;
+    top: 50%; /*posiciona en el centro*/
+    left: 50%; /*posiciona en el centro*/
+    transform: translate(-50%, -50%); /*hace que posicione en el centro del contenedor*/
+}
+.imagen_producto{
+    width: 100%;
+    height: 100%; 
+    border-radius: 8px;    
+}
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2; 
+}
+.item3{
+    grid-area: item3;
+}
+.item4{
+    grid-area: item4;
+}
+.item5{
+    grid-area: item5;
+}
+.item6{
+    grid-area: item6;
+}
+
+/*CSS ventajas*/
+.titulo_ventajas{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700; 
+    color: rgb(78, 78, 78);
+}
+.lista_ventajas{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500; 
+    color: rgb(78, 78, 78);
+    gap: 10px;
+    margin-bottom: 35px;    
+}
+.ventaja{
+    max-width: 380px;
+    background-color: rgb(245, 245, 245);   
+}
+.ventaja svg{
+    height: 40px;
+    width: 40px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    fill:  rgb(78, 78, 78);
+}
+.ventaja h2{
+    margin:1px;
+}
+
+/*CSS formulario de contacto*/
+.formulario_contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500; 
+    color: rgb(78, 78, 78);
+    background-color: rgb(245, 245, 245);
+}
+.formulario{
+    max-width: 380px;
+    width: 100%;
+}
+.nombre_contacto input{
+    width: 100%;
+    border-radius: 5px;
+    border-width: 1px;   
+}
+.correo_contacto input{
+    width: 100%;
+    border-radius: 5px;
+    border-width: 1px;
+}
+.mensaje_contacto textarea{
+    width: 100%;
+    border-radius: 5px;
+    border-width: 1px;
+}
+.boton_contacto{
+    display: flex;
+    justify-content: center;
+    margin: 15px 15px;
+}
+.boton_enviar{
+    background-color: rgb(175, 175, 175);
+    color: white; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+.boton_enviar:hover{
+    background-color :rgb(145, 145, 145);  
+}
+
+/* CSS footer*/
+.pie{
+    background-color: rgb(220, 220, 220);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    text-align: center;
+    padding: 15px 0px 20px;
+}
+.datos_contacto{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;    
+    font-size: 12px;
+    text-align: left;
+    color: rgb(78, 78, 78);
+}
+.tiendas{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;  
+}
+.servicios{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500; 
+}
+.titulo_datos{
+    border-bottom: solid rgb(78, 78, 78);
+    border-width: 1px;
+}
+.lista_servicios{
+    list-style: none;  
+    padding-left: 0px;  
+}
+.lista_servicios li{
+    margin-bottom: 10px;
+}
+.enlace_datos{
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600; 
+}
+.informacion{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500; 
+}
+
+/*CSS Iconos de redes sociales y copyright*/
+.iconos_redes{  
+    display: flex;
+    justify-content: center; 
+}
+.icono{
+    height: 25px;
+    width: 25px;
+    padding: 0px 20px;
+    fill:  rgb(78, 78, 78);
+}
+.icono:hover{
+    fill: rgb(39, 41, 41);
+}
+.copyRight{
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+} 
+
+/*CSS Responsive*/
+@media(max-width:768px){
+    .imagen_logo{
+        width: 350px;
+    }
+    .barra_navegacion{
+        height: 60px;
+        padding-right: 0px;
+    }
+    .palabra_navegacion{
+        display: none;
+    }
+    .logo_barra_navegacion_palabra{
+        display: none;
+    }
+    .texto_carrusel{
+        font-size: 35px;
+    }
+    .contenedor_productos{
+        display: grid;
+        grid-template-columns:  50% 50% ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "item1 item2" 
+        "item3 item4"
+        "item5 item6 ";
+        row-gap: 1px;
+        column-gap: 1px;
+    }
+    .productos{
+        max-width: 500px;
+        margin: 5px;
+    }
+    .lista_ventajas{
+        flex-wrap: wrap;    
+    }
+    .datos_contacto{
+        display: block;
+        padding-left: 15px;
+    }
+    .formulario_contacto{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .formulario{
+        max-width: 90%;
+    }
+}
+
+    
+
